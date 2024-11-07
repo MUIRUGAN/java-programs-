@@ -1,0 +1,47 @@
+
+problem statement
+// shifting letters says that we are given a string S and an array shifts .now for each shift[i]=X
+and we want to shift the first i+1 letters of S.after all shift are applied then return the string S.
+SAMPLE INPUT 
+// String s ="aaa"
+sample output
+// String s ="gfd"
+
+// java program
+
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        String name = "aaa";
+        
+        List <Integer> arr = new ArrayList<>(Arrays.asList(1,2,3));
+        for(int i=0;i<name.length();i++)
+        {
+            for(int j=0;j<i+1;j++)
+            {
+              char n1 = name.charAt(j);    
+              int a = (int)n1 + arr.get(i) ;
+              name = name.replaceFirst(String.valueOf(n1),String.valueOf((char)a));
+              System.out.println(name);
+           
+              
+            }
+        }
+           
+       
+    }
+    
+}
+
+output
+//baa
+daa
+dca
+gca
+gfa
+gfd
+
+=== Code Execution Successful ===
+
